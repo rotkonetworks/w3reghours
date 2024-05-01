@@ -24,10 +24,11 @@ increment_count() {
 }
 
 commit_timetracking() {
+    cd /home/user/rotko/ibphours || exit 1
+    git add "$COUNT_FILE" "$COMMIT_FILE"
+    git diff --cached --exit-code --quiet && echo "No changes to commit" && return
     commit_message=$(tail -n 1 "$COMMIT_FILE")
-    git add "$COUNT_FILE"
-    git commit -m "pomodoro: $commit_message"
-    cd /home/user/rotko/ibphours && git push
+    git commit -m "pomodoro: $commit_message" && echo "Commit successful" && git push || echo "Push failed"
 }
 
 # Initialize the count file if it doesn't exist
