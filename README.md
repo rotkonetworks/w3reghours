@@ -1,3 +1,12 @@
+# IBPhours
+
+rotkonetworks hours worked on IBP related tasks. main focus on monitoring,
+infrastructure tooling and keeping `config` repository up to date.
+peers in the syndicate are encouraged to reach me or curators out if anything is
+out of scope or hours wont match.
+
+## Work Hours
+
 | **Name** | **Month** | **Activity** | **Duration** | **Paid** | **Description** |
 |----------|-----------|--------------|--------------|-----------------|----------------|
 | Tommi    | Feb       | Mentoring    | 1 hour       | false | Mentored the Polkadot team on configuring and setting up HAProxy. |
@@ -9,3 +18,9 @@
 | Tommi    | Apr       | Automation Development | 10 hours | false | Improved data integrity through the development of workflows that test endpoint archives, as shown in [PR#45](https://github.com/ibp-network/config/pull/45). |
 | Tommi    | Apr       | Data Entry   | 5 hours       | false | Added external nodes to the repository, documented in [PR#47](https://github.com/ibp-network/config/pull/47). |
 | Tommi    | Apr       | Monitoring Development | 26 hours | false | Developed initial code for bootnode and endpoint CI monitoring, and automated test workflows for bootnodes and endpoints, as recorded in [PR#47](https://github.com/ibp-network/config/pull/47) and [PR#48](https://github.com/ibp-network/config/pull/48). |
+
+## Tracking method
+Using [git hours](https://github.com/kimmobrunfeldt/git-hours) && [pomodoro script](https://github.com/rotkonetworks/ibphours) found in the
+`/scripts/` directory. hour contains 50m of work and 10m of breaks.
+for the love of @kukabi, every worked half hour, changes are automatically committed
+to this repository starting from May onwards.
