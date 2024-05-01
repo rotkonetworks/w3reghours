@@ -1,4 +1,5 @@
 fastapi
+pydantic-settings
 pydantic
 python-dotenv
 uvicorn

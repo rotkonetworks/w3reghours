@@ -5,8 +5,7 @@ from enum import Enum
 from fastapi import FastAPI, HTTPException, status
 from fastapi.responses import HTMLResponse
 from fastapi.middleware.cors import CORSMiddleware
-from settings import settings
-from pydantic import BaseModel
+from settings import settings, StorageModel
 
 app = FastAPI()
 
@@ -17,16 +16,6 @@ app.add_middleware(
     allow_methods=['*'],
     allow_headers=['*'],
 )
-
-class StorageModel(BaseModel):
-    work_delta: int
-    break_delta: int
-    pause_start: int
-    end_time: int
-    is_work: bool
-    is_paused: bool
-    pomodoro_cnt: int
-    time_left: int
 
 @dataclass
 class Storage:
