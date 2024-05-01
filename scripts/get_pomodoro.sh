@@ -25,7 +25,7 @@ increment_count() {
 }
 
 commit_timetracking() {
-    cd /home/user/rotko/ibphours || exit 1
+    cd $IBP_HOURS_PATH || exit 1
     git add "$COUNT_FILE" "$COMMIT_FILE"
     git diff --cached --exit-code --quiet && echo "No changes to commit" && return
     commit_message=$(tail -n 1 "$COMMIT_FILE")
