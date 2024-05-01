@@ -1,0 +1,16 @@
+services:
+  api:
+    build: ./app/api
+    env_file:
+      - .env
+    ports:
+      - "${POMODORO_PORT:-9999}:${POMODORO_PORT:-9999}"
+    restart: always
+
+  web:
+    build: ./app/web
+    env_file:
+      - .env
+    ports:
+      - "3000:3000"
+    restart: always
