@@ -2,8 +2,8 @@
 
 rotkonetworks hours worked on IBP related tasks. main focus on monitoring,
 infrastructure tooling and keeping `config` repository up to date.
-peers in the syndicate are encouraged to reach me or curators out if anything is
-out of scope or hours wont match.
+peers in the syndicate are encouraged to raise issue here or @matrix,
+if anything is out of scope or hours wont match.
 
 ## Work Hours
 
@@ -20,7 +20,8 @@ out of scope or hours wont match.
 | Tommi    | Apr       | Monitoring Development | 26 hours | false | Developed initial code for bootnode and endpoint CI monitoring, and automated test workflows for bootnodes and endpoints, as recorded in [PR#47](https://github.com/ibp-network/config/pull/47) and [PR#48](https://github.com/ibp-network/config/pull/48). |
 
 ## Tracking method
-Using [git hours](https://github.com/kimmobrunfeldt/git-hours) && [pomodoro script](https://github.com/rotkonetworks/ibphours) found in the
-`/scripts/` directory. hour contains 50m of work and 10m of breaks.
-for the love of @kukabi, every worked half hour, changes are automatically committed
-to this repository starting from May onwards.
+
+Using [git hours](https://github.com/kimmobrunfeldt/git-hours) and forked/reworked [pomodoro script](https://github.com/rotkonetworks/ibphours) found in the `/scripts/` directory. each work hour contains 50m of
+work and 10m of breaks.
+for the love of `kukabi`, to improve trackability, every worked half hour,
+changes are automatically committed to this repository starting from May onwards.
