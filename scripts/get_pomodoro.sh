@@ -44,13 +44,14 @@ play_beep() {
 
 # Fetch the current timer status from the FastAPI server
 response=$(curl -s $URL/time)
+echo $response
 
 if [[ "$response" == *"take_break"* ]]; then
     play_beep
     echo "🍅 Take break!"
     curl -s $URL/next >/dev/null  # Automatically call next to start new period
     increment_count
-elif [[ "$response" == *"work_bitch"* ]]; then
+elif [[ "$response" == *"break_over"* ]]; then
     play_beep
     echo "🍅 Work bitch!"
     curl -s $URL/next >/dev/null  # Automatically call next to start new period
