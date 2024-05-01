@@ -5,9 +5,10 @@
 URL="http://localhost:9999"
 
 # File to store the count of completed half-hours
-COUNT_FILE="/home/user/rotko/ibphours/half_hour_pomodoro_counts_may.txt"
-LOCK_FILE="/home/user/rotko/ibphours/.half_hour_pomodoro_counts_may.txt"
-COMMIT_FILE="/home/user/rotko/ibphours/may.log"
+IBP_HOURS_PATH="/home/user/rotko/ibphours"
+COUNT_FILE="$IBP_HOURS_PATH/half_hour_pomodoro_counts_may.txt"
+LOCK_FILE="$IBP_HOURS_PATH/.half_hour_pomodoro_counts_may.txt"
+COMMIT_FILE="$IBP_HOURS_PATH/may.log"
 increment_count() {
     (
         flock -x 200
@@ -28,7 +29,7 @@ commit_timetracking() {
     git add "$COUNT_FILE" "$COMMIT_FILE"
     git diff --cached --exit-code --quiet && echo "No changes to commit" && return
     commit_message=$(tail -n 1 "$COMMIT_FILE")
-    git commit -m "pomodoro: $commit_message" && echo "Commit successful" && git push || echo "Push failed"
+    git commit -m "pomodoro: $commit_message" && echo "Commit successful"
 }
 
 # Initialize the count file if it doesn't exist
