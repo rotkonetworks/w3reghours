@@ -1,3 +1,6 @@
 240501-1557 - Work on finalizing bootnode testing
 240501-1826 - add subxt/smoldot into gavel
 240501-1923 - fix bootnode tests
+240501-2154 - open ibp-network/polkadot-sdk PR for fixing broken bootnodes
+240502-0154 - work ansible script for genpeerid backups
+240502-0602 - work on fixing bootnode PR / create PR to upstream

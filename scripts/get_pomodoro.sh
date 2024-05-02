@@ -4,8 +4,8 @@
 # URL of the Pomodoro API
 URL="http://localhost:9999"
 
-# File to store the count of completed half-hours
 IBP_HOURS_PATH="/home/user/rotko/ibphours"
+# File to store the count of completed half-hours
 COUNT_FILE="$IBP_HOURS_PATH/half_hour_pomodoro_counts_may.txt"
 LOCK_FILE="$IBP_HOURS_PATH/.half_hour_pomodoro_counts_may.txt"
 COMMIT_FILE="$IBP_HOURS_PATH/may.log"
@@ -29,7 +29,6 @@ commit_timetracking() {
     git add "$COUNT_FILE" "$COMMIT_FILE"
     git diff --cached --exit-code --quiet && echo "No changes to commit" && return
     commit_message=$(tail -n 1 "$COMMIT_FILE")
-    echo "wtfcommit"
     git commit -m "pomodoro: $commit_message" && echo "Commit successful"
 }
 
@@ -46,24 +45,23 @@ play_beep() {
 # Fetch the current timer status from the FastAPI server
 response=$(curl -s $URL/time)
 echo $response
-echo "wtfresponse"
 
 if [[ "$response" == *"take_break"* ]]; then
     play_beep
     echo "🍅 Take break!"
     curl -s $URL/next >/dev/null  # Automatically call next to start new period
     increment_count
+    commit_timetracking
 elif [[ "$response" == *"break_over"* ]]; then
     play_beep
     echo "🍅 Work bitch!"
     curl -s $URL/next >/dev/null  # Automatically call next to start new period
 elif [[ "$response" == *"PAUSE"* ]]; then
-    echo "🍅 Paused"  # Display pause status in Polybar
+    echo "🍅 Paused"
 elif [[ "$response" == *"NO_POMODORO"* ]]; then
-    echo "No Pomodoro"  # Display no timer running
+    echo "No Pomodoro"
 else
     # Extract the remaining time and format it for display in Polybar
     remaining=$(echo "$response" | grep -oE '[0-9]{1,2}:[0-9]{2}')
-    echo "🍅 $remaining"  # Show remaining time with an icon
-    echo "wtfremaining"
+    echo "🍅 $remaining"
 fi
