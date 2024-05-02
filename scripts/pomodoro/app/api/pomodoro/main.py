@@ -43,16 +43,6 @@ class Storage:
             return self.end_time - self.pause_start
         return self.end_time - now
 
-    # @property
-    # def time_left(self) -> int:
-    #     now = int(dt.datetime.now().timestamp())
-    #     if not self.is_paused:
-    #         time_left = self.end_time - now
-    #     else:
-    #         time_left = now - self.pause_start
-    #         time_left = self.end_time - self.pause_start
-    #     return time_left
-
 
 class Variables(str, Enum):
     IS_WORK = 'is_work'
@@ -64,7 +54,7 @@ class Variables(str, Enum):
 
 
 class Responses(str, Enum):
-    LEFT = '{pomodoro} Time left {minutes}:{seconds}'
+    LEFT = '{pomodoro} {minutes}:{seconds}'
     WORK_PERIOD_ENDED = 'take_break'
     BREAK_PERIOD_ENDED = 'break_over'
     PAUSE = 'PAUSE'
@@ -73,8 +63,6 @@ class Responses(str, Enum):
 
 _MINUTE = 60
 storage = None
-
-
 
 def init_database():
     global storage

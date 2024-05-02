@@ -29,6 +29,7 @@ commit_timetracking() {
     git add "$COUNT_FILE" "$COMMIT_FILE"
     git diff --cached --exit-code --quiet && echo "No changes to commit" && return
     commit_message=$(tail -n 1 "$COMMIT_FILE")
+    echo "wtfcommit"
     git commit -m "pomodoro: $commit_message" && echo "Commit successful"
 }
 
@@ -45,6 +46,7 @@ play_beep() {
 # Fetch the current timer status from the FastAPI server
 response=$(curl -s $URL/time)
 echo $response
+echo "wtfresponse"
 
 if [[ "$response" == *"take_break"* ]]; then
     play_beep
@@ -63,4 +65,5 @@ else
     # Extract the remaining time and format it for display in Polybar
     remaining=$(echo "$response" | grep -oE '[0-9]{1,2}:[0-9]{2}')
     echo "🍅 $remaining"  # Show remaining time with an icon
+    echo "wtfremaining"
 fi
