@@ -7,3 +7,4 @@
 240502-1620 - debug bootnode workflow
 240502-1959 - work fixing monitor
 240502-2055 - add in gavel feature to resolve endpoints to another IP
+240502-2312 - make gavel test services.json
