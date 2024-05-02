@@ -4,3 +4,5 @@
 240501-2154 - open ibp-network/polkadot-sdk PR for fixing broken bootnodes
 240502-0154 - work ansible script for genpeerid backups
 240502-0602 - work on fixing bootnode PR / create PR to upstream
+240502-1620 - debug bootnode workflow
+240502-1959 - work fixing monitor
