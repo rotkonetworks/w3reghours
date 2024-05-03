@@ -11,3 +11,4 @@
 240503-0137 - write wiki
 240503-0218 - rework endpoints to use syndicate domains
 240503-0541 - work on snitch to receive endpoint/bootnode data and send alerts to matrix/telegram
+240503-0640 - work on api to receive data
