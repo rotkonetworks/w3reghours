@@ -16,3 +16,8 @@
 240504-0124 - matrix alerts
 240504-0423 - focus on fixing our bootnodes.json data based on initial tests
 240504-0502 - add encointer into parachain testing
+240504-0913 - make longer bootnode testing while making process parallel
+240504-1051 - add prometheus exporter for peers into gavel
+240504-2158 - draw graphviz
+240504-2316 - test_bootnode to use prometheus
+240505-0052 - work on parallel bootnodes
