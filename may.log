@@ -22,3 +22,5 @@
 240504-2316 - test_bootnode to use prometheus
 240505-0052 - work on parallel bootnodes
 240505-0344 - fix github workflows to work with parallel version
+240505-1912 - improve snitch for alerts/datastore
+240505-2206 - rework snitch structure
