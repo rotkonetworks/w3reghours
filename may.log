@@ -25,3 +25,4 @@
 240505-1912 - improve snitch for alerts/datastore
 240505-2206 - rework snitch structure
 240506-2100 - work on improving gavel
+240509-2130 - fix ssl cert monitoring
