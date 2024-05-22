@@ -24,7 +24,7 @@ if anything is out of scope or hours wont match.
 
 ## Tracking method
 
-Using [git hours](https://github.com/kimmobrunfeldt/git-hours) and forked/reworked [pomodoro script](https://github.com/rotkonetworks/ibphours) found in the `/scripts/` directory. each work hour contains 50m of
+Using [git hours](https://github.com/kimmobrunfeldt/git-hours) and forked/reworked [pomodoro script]([https://github.com/rotkonetworks/ibphours](https://github.com/rotkonetworks/ibphours/tree/master/scripts)) found in the `/scripts/` directory. each work hour contains 50m of
 work and 10m of breaks.
 to improve trackability, every worked half hour, changes are automatically
 committed to this repository starting from May onwards. commit log based on 
