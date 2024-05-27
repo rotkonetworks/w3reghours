@@ -2,13 +2,13 @@
 # File: get_pomodoro.sh
 
 # URL of the Pomodoro API
-URL="http://localhost:9999"
+URL="http://localhost:9998"
 
-IBP_HOURS_PATH="/home/user/rotko/ibphours"
+IBP_HOURS_PATH="/home/user/rotko/w3reghours"
 # File to store the count of completed half-hours
-COUNT_FILE="$IBP_HOURS_PATH/half_hour_pomodoro_counts_may.txt"
-LOCK_FILE="$IBP_HOURS_PATH/.half_hour_pomodoro_counts_may.txt"
-COMMIT_FILE="$IBP_HOURS_PATH/may.log"
+COUNT_FILE="$IBP_HOURS_PATH/half_hour_pomodoro_counts_tommi.txt"
+LOCK_FILE="$IBP_HOURS_PATH/.half_hour_pomodoro_counts_tommi.txt"
+COMMIT_FILE="$IBP_HOURS_PATH/tommi.log"
 increment_count() {
     (
         flock -x 200

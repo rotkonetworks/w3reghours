@@ -4,7 +4,7 @@ services:
     env_file:
       - .env
     ports:
-      - "${POMODORO_PORT:-9999}:${POMODORO_PORT:-9999}"
+      - "${POMODORO_PORT:-9998}:${POMODORO_PORT:-9998}"
     restart: always
 
   web:
